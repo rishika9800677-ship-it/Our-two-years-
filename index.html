@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rishika ❤️ Milind</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Arial, sans-serif;
+      background:#fff0f5;
+      color:#333;
+      overflow-x:hidden;
+    }
+
+    section{
+      padding:70px 20px;
+    }
+
+    .center{
+      text-align:center;
+    }
+
+    h1,h2,h3{
+      color:#ff4d6d;
+      margin-bottom:15px;
+    }
+
+    p{
+      line-height:1.8;
+      margin-top:10px;
+      font-size:16px;
+    }
+
+    button{
+      margin-top:20px;
+      padding:12px 24px;
+      border:none;
+      border-radius:30px;
+      background:#ff4d6d;
+      color:white;
+      font-size:16px;
+      cursor:pointer;
+    }
+
+    .hero{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+    }
+
+    .hero h1{
+      font-size:40px;
+    }
+
+    .hero p{
+      font-size:18px;
+    }
+
+    .card{
+      background:white;
+      padding:20px;
+      border-radius:20px;
+      margin-top:20px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin-top:20px;
+    }
+
+    .gallery img{
+      width:100%;
+      border-radius:15px;
+    }
+
+    .dark{
+      background:#111;
+      color:white;
+    }
+
+    #stars{
+      margin-top:20px;
+    }
+
+    #stars span{
+      font-size:28px;
+      margin:8px;
+      cursor:pointer;
+    }
+
+    #loveText{
+      margin-top:15px;
+      font-size:18px;
+      transition:0.5s;
+    }
+
+    .heart{
+      position:fixed;
+      color:#ff4d6d;
+      animation:float 8s linear infinite;
+      opacity:0.3;
+      z-index:-1;
+    }
+
+    @keyframes float{
+      0%{
+        transform:translateY(100vh);
+      }
+
+      100%{
+        transform:translateY(-120vh);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+
+<script>
+
+for(let i=0;i<25;i++){
+
+  let heart=document.createElement("div");
+
+  heart.className="heart";
+
+  heart.innerHTML="❤️";
+
+  heart.style.left=Math.random()*100+"vw";
+
+  heart.style.fontSize=(Math.random()*20+10)+"px";
+
+  heart.style.animationDuration=(Math.random()*5+5)+"s";
+
+  document.body.appendChild(heart);
+
+}
+
+</script>
+
+<!-- Landing Page -->
+
+<section class="hero center">
+
+  <h1>Rishika ❤️ Milind</h1>
+
+  <p>2 Years Of Us 💖</p>
+
+  <p>
+    I made something special for you...
+  </p>
+
+  <button onclick="scrollToSection('countdown')">
+    Start Our Journey
+  </button>
+
+</section>
+
+<!-- Countdown -->
+
+<section id="countdown" class="center">
+
+  <h2>We've Been Together For ⏳</h2>
+
+  <h1 id="timer"></h1>
+
+</section>
+
+<!-- Our Story -->
+
+<section>
+
+  <h2 class="center">Our Story 💫</h2>
+
+  <div class="card">
+
+    <h3>When We First Met ❤️</h3>
+
+    <p>
+      When we first talked, I asked for your friendship
+      and thank God I did.
+      You replied and our cute bond grew deeper so fast.
+      I never realized when we started loving each other so much.
+    </p>
+
+  </div>
+
+  <div class="card">
+
+    <h3>Late Night Chats 🌙</h3>
+
+    <p>
+      I still remember how we used to talk at night.
+      I felt so safe and comfortable with you.
+      That’s when I realized how much of a gentleman you are.
+      Our late night chats were truly a gem.
+    </p>
+
+  </div>
+
+  <div class="card">
+
+    <h3>That Funny Moment 😂</h3>
+
+    <p>
+      I still remember the first time you flirted with me 🤣
+      “Sapne me aaunga”
+      was honestly so funny and cute.
+      I still laugh remembering it today.
+    </p>
+
+  </div>
+
+  <div class="card">
+
+    <h3>When I Fell For You 🥺</h3>
+
+    <p>
+      I started liking you because of your personality,
+      your care, your respect and the trust between us.
+      Even when I thought things were impossible,
+      one late night conversation made me realize...
+      you were the one.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- Gallery -->
+
+<section>
+
+  <h2 class="center">Our Memories 📸</h2>
+
+  <div class="gallery">
+
+    <img src="img1.jpg">
+    <img src="img2.jpg">
+    <img src="img3.jpg">
+    <img src="img4.jpg">
+
+  </div>
+
+</section>
+
+<!-- Voice Note -->
+
+<section class="center">
+
+  <h2>Listen To Me ❤️</h2>
+
+  <button onclick="playAudio()">
+    Play Voice Note 🎧
+  </button>
+
+  <audio id="voice" src="voice.mp3"></audio>
+
+</section>
+
+<!-- Love Generator -->
+
+<section class="center">
+
+  <h2>Why I Love You 💌</h2>
+
+  <p id="loveText">
+    Click below ❤️
+  </p>
+
+  <button onclick="generateLove()">
+    Click Me
+  </button>
+
+</section>
+
+<!-- Relationship Stats -->
+
+<section class="center">
+
+  <h2>Our Relationship Stats 📊</h2>
+
+  <div class="card">
+
+    <p>Days Together ❤️ : Forever</p>
+
+    <p>Late Night Talks 🌙 : Countless</p>
+
+    <p>Comfort Level 🫶 : 1000%</p>
+
+    <p>Love For You 💖 : Endless</p>
+
+  </div>
+
+</section>
+
+<!-- Starry Sky -->
+
+<section class="dark center">
+
+  <h2>Tap The Stars ✨</h2>
+
+  <div id="stars"></div>
+
+  <p id="starMsg"></p>
+
+</section>
+
+<!-- Future -->
+
+<section>
+
+  <h2 class="center">Our Future Together ✈️</h2>
+
+  <div class="card">
+
+    <p>
+      I want more years with you,
+      more memories,
+      more laughs,
+      more hugs,
+      and a forever with you.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- Final Message -->
+
+<section class="center">
+
+  <h2>For You, Milind ❤️</h2>
+
+  <div class="card">
+
+    <p>
+      All I want to say is that these two years
+      I spent with you are unforgettable.
+      I want to make every year special
+      just by being with you.
+    </p>
+
+    <p>
+      I know I can’t always give my all to you,
+      but I am yours and I will always be yours.
+    </p>
+
+    <p>
+      Even after two years,
+      when many things changed,
+      one thing remained the same —
+      our feelings for each other.
+    </p>
+
+    <p>
+      All I know is that I love you
+      and I want to be with you forever.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- Final Twist -->
+
+<section class="dark center">
+
+  <h2>One Last Thing… 🥺</h2>
+
+  <p style="font-size:20px; margin-top:20px;">
+
+    I just want to hug you tightly
+    and make everything more than perfect.
+
+  </p>
+
+</section>
+
+<script>
+
+function scrollToSection(id){
+
+  document.getElementById(id).scrollIntoView({
+
+    behavior:"smooth"
+
+  });
+
+}
+
+/* Countdown */
+
+const startDate = new Date("2024-04-01");
+
+function updateTimer(){
+
+  const now = new Date();
+
+  const diff = now - startDate;
+
+  const days = Math.floor(diff/(1000*60*60*24));
+
+  document.getElementById("timer").innerHTML =
+  days + " Days ❤️";
+
+}
+
+setInterval(updateTimer,1000);
+
+/* Voice */
+
+function playAudio(){
+
+  document.getElementById("voice").play();
+
+}
+
+/* Love Generator */
+
+const reasons = [
+
+  "You always respect me ❤️",
+
+  "You help me become better 🌱",
+
+  "You love me so much 🥺",
+
+  "You care for me endlessly 💖",
+
+  "You never shout at me 😌",
+
+  "You are my pretty baby 😄",
+
+  "You are a true gentleman 🌸",
+
+  "You make me feel safe 🫶"
+
+];
+
+function generateLove(){
+
+  const text=document.getElementById("loveText");
+
+  text.style.opacity=0;
+
+  setTimeout(()=>{
+
+    text.innerHTML=
+    reasons[Math.floor(Math.random()*reasons.length)];
+
+    text.style.opacity=1;
+
+  },300);
+
+}
+
+/* Stars */
+
+const messages=[
+
+  "I love you ❤️",
+
+  "You are my comfort person 🥺",
+
+  "Forever yours 💖",
+
+  "You make me happiest 😄"
+
+];
+
+const stars=document.getElementById("stars");
+
+for(let i=0;i<25;i++){
+
+  let star=document.createElement("span");
+
+  star.innerHTML="⭐";
+
+  star.onclick=function(){
+
+    document.getElementById("starMsg").innerHTML=
+
+    messages[Math.floor(Math.random()*messages.length)];
+
+  }
+
+  stars.appendChild(star);
+
+}
+
+</script>
+
+</body>
+</html>
